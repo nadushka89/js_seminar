@@ -13,19 +13,18 @@
 Примечание: выражение [1, 32) означает от 1 включительно, до 32, не включая 
 число 32.
 */
-let dayNumber = Number(prompt("Введите целое число в интервале от 1 до 31 "));
-let decade;
-if (dayNumber>=1 && dayNumber<=31) {
-    if (dayNumber <= 10){
+const dayNumber = Number(prompt("Введите целое число в интервале от 1 до 31 "));
+
+if (dayNumber >= 1 && dayNumber <= 31) {
+    let decade;
+    if (dayNumber <= 10) {
         decade = 1;
     } else if (dayNumber <= 20) {
         decade = 2;
-    }
-    else{
+    } else {
         decade = 3;
     }
     console.log(`Число ${dayNumber} попадает в ${decade} декаду месяца.`);
-}
-else{
+} else {
     console.log("Неверное значение");
 }
